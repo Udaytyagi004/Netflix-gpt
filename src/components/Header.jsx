@@ -26,7 +26,7 @@ const Header = () =>{
     };
 
     return(
-        <div className="flex justify-between p-2 font-bold text-lg  text-white sticky top-0 z-12"> 
+        <div className="flex justify-between p-2 font-bold text-lg  text-white relative z-10"> 
             <ul className="flex items-center ">
                 <li className="m-2"><img src={Netflix_Logo}  width={150}/></li>
                 <li className="m-3 ml-6">Home</li>
