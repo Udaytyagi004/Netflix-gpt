@@ -9,3 +9,11 @@ export const API_OPTIONS = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzIzNjM1YzM1ZDAxM2E2OTc5YjBmNmJmOTE1MzY1MiIsIm5iZiI6MTc1NDczOTQ1My4zODgsInN1YiI6IjY4OTczMmZkOGVmYzQ0MjBjZDJjMGIyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PWqsSkL_TFYGZgWZBcpR1xamShmpKtkj9AW6KeQMSKo'
   }
 };
+
+export const SUPPORTED_LANGUAGES = [
+  {identifier: "en", name: "English"},
+  {identifier : "hindi", name: "हिंदी"},
+  {identifier: "spanish" , name: "Español"},
+  {identifier: "french", name: "Français"},
+  {identifier: "german", name: "Deutsch"}
+]

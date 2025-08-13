@@ -7,14 +7,14 @@ const MainContainer = () =>{
     const movies = useSelector((store) => store.movies?.upComigMovies);
     if(!movies) return;
 
-    const mainMovie = movies[14];
+    const mainMovie = movies[2];
     
     const { original_title, overview, id } = mainMovie;
 
     return (
         <div className="relative">
              <VideoBackground  movieId={id}/>
-             <Header />
+            
 
              <VideoTitle title={original_title} description={overview} />
                          
