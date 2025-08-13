@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
-import { addNowPlayingMovies, addPopularMovies, addTopRatedMovies, addUpcomingMovies } from "../utils/movieSlice";
+import { addNowPlayingMovies, addPopularMovies, addPopularshows, addshows, addTopRatedMovies, addUpcomingMovies } from "../utils/movieSlice";
 import { useEffect } from "react";
 
 export  const useMovieList = () =>{
@@ -35,6 +35,24 @@ export  const useMovieList = () =>{
         const json = await data.json();
         dispatch(addUpcomingMovies(json.results));
 
+    };
+
+      const getShows = async ()=>{
+        const data  = await fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', API_OPTIONS
+        )
+
+        const json = await data.json();
+        dispatch(addshows(json.results));
+
+    };
+
+     const getPopularShows = async ()=>{
+        const data  = await fetch('https://api.themoviedb.org/3/tv/popular?page=1', API_OPTIONS
+        )
+
+        const json = await data.json();
+        dispatch(addPopularshows(json.results));
+
     }
 
 
@@ -57,5 +75,7 @@ export  const useMovieList = () =>{
         getPopularMovies();
         getUpcomigdMovies();
         getTopRatedMovies();
+        getShows();
+        getPopularShows();
     },[])
 }
