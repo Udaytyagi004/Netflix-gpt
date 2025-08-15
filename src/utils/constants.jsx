@@ -6,7 +6,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMzIzNjM1YzM1ZDAxM2E2OTc5YjBmNmJmOTE1MzY1MiIsIm5iZiI6MTc1NDczOTQ1My4zODgsInN1YiI6IjY4OTczMmZkOGVmYzQ0MjBjZDJjMGIyMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PWqsSkL_TFYGZgWZBcpR1xamShmpKtkj9AW6KeQMSKo'
+    Authorization: import.meta.env.VITE_TMDB_API_KEY
   }
 };
 

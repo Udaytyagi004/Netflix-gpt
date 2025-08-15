@@ -1,10 +1,11 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
 import { addNowPlayingMovies, addPopularMovies, addPopularshows, addshows, addTopRatedMovies, addUpcomingMovies } from "../utils/movieSlice";
 import { useEffect } from "react";
 
 export  const useMovieList = () =>{
 
+    const  {nowPlayingMovies , PopularMovies , topRatedMovies , upComingMovies , shows , popularShows} = useSelector((state =>state.movies))
      
     const dispatch = useDispatch();
 
@@ -54,28 +55,12 @@ export  const useMovieList = () =>{
         dispatch(addPopularshows(json.results));
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     useEffect(()=>{
-        getNowPlaying();
-        getPopularMovies();
-        getUpcomigdMovies();
-        getTopRatedMovies();
-        getShows();
-        getPopularShows();
+        !nowPlayingMovies && getNowPlaying();
+        !PopularMovies && getPopularMovies();
+        !upComingMovies && getUpcomigdMovies();
+        !topRatedMovies && getTopRatedMovies();
+        !shows &&  getShows();
+        !popularShows &&  getPopularShows();
     },[])
 }

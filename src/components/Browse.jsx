@@ -15,6 +15,7 @@ const Browse = () =>{
     return (
         <div className="relative m-0 bg-black ">
              <Header />
+             
            {showSearch?<GptSearchPage /> : <> <MainContainer />
            <SecondaryContainer /></>}
           

@@ -7,7 +7,7 @@ const movieSlice = createSlice({
         trailor:null,
         PopularMovies: null,
         topRatedMovies: null,
-        upComigMovies: null,
+        upComingMovies: null,
         shows:null,
         popularShows : null,
     },
@@ -25,7 +25,7 @@ reducers:{
         state.topRatedMovies = action.payload;
     },
     addUpcomingMovies : (state,action)=>{
-        state.upComigMovies = action.payload
+        state.upComingMovies = action.payload
     },
     addshows: (state, action) => {
         state.shows = action.payload;

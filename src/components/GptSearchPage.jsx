@@ -3,6 +3,7 @@ import lang from "../utils/languageConstants";
 import { SUPPORTED_LANGUAGES } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { changeLanguage } from "../utils/configSlice";
+import MovieSuggestion from "./MovieSuggestion";
 
 const GptSearchPage = () =>{
     const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const GptSearchPage = () =>{
             <h1 className="font-bold text-center mt-20 text-4xl">{lang[currentLanguage].heading}</h1>
             <h2 className="font-bold text-center  text-2xl m-4">{lang[currentLanguage].subHeading}</h2>
             <GptSearchBar />
+            <MovieSuggestion />
             </div>
     )
 }

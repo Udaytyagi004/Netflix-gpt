@@ -1,10 +1,11 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
 import { addTrailor } from "../utils/movieSlice";
 import { useEffect } from "react";
 
 export const useTrailor = (movieId) =>{
-
+    
+    const trailor = useSelector((store)=>store.movies.trailor);
     const dispatch = useDispatch();
    
 
@@ -19,7 +20,7 @@ export const useTrailor = (movieId) =>{
 
     }
     useEffect(()=>{
-        getTrailor()
+       !trailor && getTrailor()
     },[]);
     
 }

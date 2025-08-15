@@ -1,5 +1,7 @@
 const MovieCard = ({movie}) =>{
-    const {title, backdrop_path,poster_path, name} = movie;
+    const {title, backdrop_path, name} = movie;
+
+    if(!backdrop_path) return null;
     
     return (
         <div className="m-2 w-80 text-white">
